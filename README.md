@@ -52,12 +52,12 @@ Save each frame of the video as an image:\
 Now we have a directory full of images which we want to apply a GIMP effect to. Let's create another directory to save the output of GIMP. I'll name my directory "new".
 mkdir new
 
-
+<br/><br/>
 ===  IMPORTANT!  ===
 Become familar with the Script-Fu Console.
 Open the GIMP (GUI) app. In the Menubar go to Filters > Script-Fu > Console > Browse.
 This is where you find the names of all the GIMP commands, and their options, and their explanations.
-
+<br/><br/>
 
 Alright, now we get dirty. Here is the syntax for GIMP CLI:
 
