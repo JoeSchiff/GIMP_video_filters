@@ -46,14 +46,14 @@ Save each frame of the video as an image:\
 `ffmpeg -hide_banner -i /home/user/Videos/f20653824_ftyp.mov temp_%0"$zero_pads"d.png`
 
 
-<br/><br/>
+<br/><br/><br/>
 ### 2. Apply the effects to each image
 Now we have a directory full of images which we want to apply a GIMP effect to. Let's create another directory to save the output of GIMP. I'll name my directory "new".\
 `mkdir new`
 
 
 <br/><br/><br/>
-===  IMPORTANT!  ===\
+** ===  IMPORTANT!  ===\ **
 Become familar with the Script-Fu Console.\
 Open the GIMP (GUI) app. In the Menubar go to Filters > Script-Fu > Console > Browse.\
 This is where you find the names of all the GIMP commands, and their options, and their explanations.
