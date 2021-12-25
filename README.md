@@ -125,7 +125,7 @@ gimp: GEGL-WARNING: (../gegl/buffer/gegl-tile-handler-cache.c:1076):gegl_tile_ca
 EEEEeEeek! 5 GeglBuffers leaked
 
 but it still works, so I ignore it.
-<br/>
+<br/><br/>
 You can probably make this much faster if you can find a way to keep one GIMP instance open the entire time, rather than open and close for each file. Let me know if you figure it out.
 
 
