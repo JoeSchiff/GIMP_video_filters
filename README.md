@@ -1,7 +1,6 @@
 
 # How to apply GIMP effects (filters) to video
 
-<br/>
 
 #### Versions:
 OS: Ubuntu 21.04\
@@ -51,6 +50,7 @@ Save each frame of the video as an image:\
 ### 2. Apply the effects to each image
 Now we have a directory full of images which we want to apply a GIMP effect to. Let's create another directory to save the output of GIMP. I'll name my directory "new".
 mkdir new
+
 
 <br/><br/>
 ===  IMPORTANT!  ===\
@@ -136,11 +136,11 @@ Now we have a directory full of images with the effects applied. Use ffmpeg to c
 cd new
 ffmpeg -hide_banner -framerate 29.97 -pattern_type glob -i '*.png' -c:v libx264 -preset slow -crf 19 output.mkv
 ```
-
+<br/><br/>
 The audio will have been removed. Here's how you can extract the audio stream from the orignal video:
 `ffmpeg -hide_banner -i /home/user/Videos/f20653824_ftyp.mov -vn -acodec copy output.aac`
 
-
+<br/><br/>
 And here's how to reapply the audio to the video after the new effects.
 `ffmpeg -hide_banner -i output.mkv -i output.aac -map 0:v -map 1:a -c:v copy combined_output.mkv`
 
