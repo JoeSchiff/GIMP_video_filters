@@ -36,8 +36,8 @@ zero_pads=$(echo "l($(ffprobe -i $file_path -v error -select_streams v:0 -show_e
 
 
 Create a directory to put the images in and cd to it.
-'''mkdir all_frames
-cd all_frames'''
+```mkdir all_frames
+cd all_frames```
 
 Save each frame of the video as an image:
 ffmpeg -hide_banner -i /home/user/Videos/f20653824_ftyp.mov temp_%0"$zero_pads"d.png
@@ -61,9 +61,10 @@ Alright, now we get dirty. Here is the syntax for GIMP CLI:
 Open a file with GIMP. The trailing backslash is to indicate that this code is mulitple lines.
 The "-b" argument is used to run multiple commands in a batch...
 followed by the command you want to use. The command is usually followed by some numerical options.
-'''gimp -i $filename \
+```
+gimp -i $filename \
 -b '(some-gimp-command 0 1 2 3 4 5)'
-'''
+```
 
 Let's do a real example.
 
