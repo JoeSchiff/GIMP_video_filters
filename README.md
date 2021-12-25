@@ -53,7 +53,7 @@ Now we have a directory full of images which we want to apply a GIMP effect to. 
 mkdir new
 
 <br/><br/>
-===  IMPORTANT!  ===
+===  IMPORTANT!  ===\
 Become familar with the Script-Fu Console.
 Open the GIMP (GUI) app. In the Menubar go to Filters > Script-Fu > Console > Browse.
 This is where you find the names of all the GIMP commands, and their options, and their explanations.
@@ -72,17 +72,17 @@ gimp -i $filename \
 
 Let's do a real example.
 
-We are going to loop through all the images in this directory.
+We are going to loop through all the images in this directory.\
 `for i in $(find . -maxdepth 1 -type f | sort -V); do`
 
-Open a file with GIMP
+Open a file with GIMP\
 `gimp -i $filename \`
 
-Optional: You can specify the number of threads to utilize. I'm not sure if this works.
+Optional: You can specify the number of threads to utilize. I'm not sure if this works.\
 `gimp --gegl-threads=4 -i "$i" \`
 
 
-The first batch command we want to run is to make a selection. That way we apply the effect to only a specific portion of the image.
+The first batch command we want to run is to make a selection. That way we apply the effect to only a specific portion of the image.\
 `-b '(gimp-image-select-rectangle 1 0 20 15 800 700)' \`
 
 Here we are using rectangular select. There are other selection methods such as ellipse, rounded rectangle, etc.
@@ -90,17 +90,17 @@ To understand the number options, look up the command in the Script-Fu Console, 
 The last 4 numbers are most important in this example. They are: x coordinate of upper-left corner of rectangle, y coordinate of upper-left corner of rectangle, The width of the rectangle, The height of the rectangle. So this example we are starting the rectangular selection at position 20, 15 and it is 800 pixels wide by 700 pixels high.
 
 
-With the next batch command we are going to apply the effect (filter) called "wind" to the selection. Again, you can find the name of other effects in the Script-Fu Console. They start with "plug-in-".
+With the next batch command we are going to apply the effect (filter) called "wind" to the selection. Again, you can find the name of other effects in the Script-Fu Console. They start with "plug-in-".\
 `-b '(plug-in-wind 1 1 2 10 2 60 0 0)' \`
 Notice that the third numerical option is "2". This refers to the selection we made in the previous step. GIMP CLI uses the term "Drawable" instead of "Selection".
 
 You can apply more batch commands if you wish.
 
 
-Now that we are done, let's save the result. We are using the directory named "new" and "$i" is the variable we assigned during the for loop. I don't know why the raw filename and double quotes are needed, but they are.
+Now that we are done, let's save the result. We are using the directory named "new" and "$i" is the variable we assigned during the for loop. I don't know why the raw filename and double quotes are needed, but they are.\
 `-b "(file-png-save-defaults 1 1 2 \"new/$i\" \"raw\")" \`
 
-Close GIMP
+Close GIMP\
 `-b '(gimp-quit 0)'`
 
 
@@ -119,7 +119,7 @@ for i in $(find . -maxdepth 1 -type f | sort -V)
     echo Done: "$i"
 done
 ```
-
+<br/><br/>
 I get the following error:
 gimp: GEGL-WARNING: (../gegl/buffer/gegl-tile-handler-cache.c:1076):gegl_tile_cache_destroy: runtime check failed: (g_queue_is_empty (&cache_queue))
 EEEEeEeek! 5 GeglBuffers leaked
