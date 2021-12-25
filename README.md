@@ -120,16 +120,16 @@ for i in $(find . -maxdepth 1 -type f | sort -V)
 done
 ```
 <br/><br/>
-I get the following error:
+I get the following error:\
 gimp: GEGL-WARNING: (../gegl/buffer/gegl-tile-handler-cache.c:1076):gegl_tile_cache_destroy: runtime check failed: (g_queue_is_empty (&cache_queue))
 EEEEeEeek! 5 GeglBuffers leaked
 
 but it still works, so I ignore it.
-
+<br/>
 You can probably make this much faster if you can find a way to keep one GIMP instance open the entire time, rather than open and close for each file. Let me know if you figure it out.
 
 
-
+<br/><br/>
 ### 3. Convert the images back to a video
 Now we have a directory full of images with the effects applied. Use ffmpeg to convert them back into a video.
 ```
