@@ -91,13 +91,14 @@ The last 4 numbers are most important in this example. They are: x coordinate of
 
 
 With the next batch command we are going to apply the effect (filter) called "wind" to the selection. Again, you can find the name of other effects in the Script-Fu Console. They start with "plug-in-".\
-`-b '(plug-in-wind 1 1 2 10 2 60 0 0)' \`
-Notice that the third numerical option is "2". This refers to the selection we made in the previous step. GIMP CLI uses the term "Drawable" instead of "Selection".
+`-b '(plug-in-wind 1 1 2 10 2 60 0 0)' \`\
+Notice that the third numerical option is "2". This refers to the selection we made in the previous step.\
+GIMP CLI uses the term "Drawable" instead of "Selection".
 
 You can apply more batch commands if you wish.
 
-
-Now that we are done, let's save the result. We are using the directory named "new" and "$i" is the variable we assigned during the for loop. I don't know why the raw filename and double quotes are needed, but they are.\
+<br/><br/>
+Now that we are done, let's save the result. We are using the directory named "new" and "$i" is the variable we assigned during the FOR loop. I don't know why the raw filename and double quotes are needed, but they are.\
 `-b "(file-png-save-defaults 1 1 2 \"new/$i\" \"raw\")" \`
 
 Close GIMP\
@@ -119,6 +120,7 @@ for i in $(find . -maxdepth 1 -type f | sort -V)
     echo Done: "$i"
 done
 ```
+
 <br/><br/>
 I get the following error:\
 gimp: GEGL-WARNING: (../gegl/buffer/gegl-tile-handler-cache.c:1076):gegl_tile_cache_destroy: runtime check failed: (g_queue_is_empty (&cache_queue))
@@ -137,11 +139,11 @@ cd new
 ffmpeg -hide_banner -framerate 29.97 -pattern_type glob -i '*.png' -c:v libx264 -preset slow -crf 19 output.mkv
 ```
 <br/><br/>
-The audio will have been removed. Here's how you can extract the audio stream from the orignal video:
+The audio will have been removed. Here's how you can extract the audio stream from the orignal video:\
 `ffmpeg -hide_banner -i /home/user/Videos/f20653824_ftyp.mov -vn -acodec copy output.aac`
 
 <br/><br/>
-And here's how to reapply the audio to the video after the new effects.
+And here's how to reapply the audio to the video after the new effects.\
 `ffmpeg -hide_banner -i output.mkv -i output.aac -map 0:v -map 1:a -c:v copy combined_output.mkv`
 
 
