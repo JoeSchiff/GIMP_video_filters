@@ -3,7 +3,7 @@
 
 <br/>
 
-### Versions:
+#### Versions:
 OS: Ubuntu 21.04\
 kernel: 5.11.0-22-generic\
 GIMP: 2.10.22\
@@ -14,7 +14,7 @@ ffprobe: 4.3.2-0\
 
 
 <br/><br/>
-### Summary:
+## Summary:
 1. Save each frame of the video as an image
 2. Apply a GIMP effect to each image
 3. Convert the images back to a video
@@ -23,10 +23,10 @@ ffprobe: 4.3.2-0\
 <br/><br/>
 ### 1. Save each frame of the video as an image
 The first thing we need to do is determine how much zero padding in the filenames we need so they are sorted correctly. You can estimate how much zero padding you need by multiplying the frames per second by the video duration.
-    Example: 30FPS x 15 seconds = 450 frames. Three digit number, so we need zero padding of at least 2.
+    Example: 30FPS x 15 seconds = 450 frames. Three digit number, so we need zero padding of at least 2.\
 `zero_pads=2`
 
-Or you could just use an arbitrarily high value, like 8, which is enough for about a billion frames.
+Or you could just use an arbitrarily high value, like 8, which is enough for about a billion frames.\
 `zero_pads=8`
 
 Optional:
@@ -43,7 +43,7 @@ mkdir all_frames
 cd all_frames
 ```
 
-Save each frame of the video as an image:
+Save each frame of the video as an image:\
 `ffmpeg -hide_banner -i /home/user/Videos/f20653824_ftyp.mov temp_%0"$zero_pads"d.png`
 
 
