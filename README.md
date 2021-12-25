@@ -1,9 +1,9 @@
 
-How to apply GIMP effects (filters) to video
+# How to apply GIMP effects (filters) to video
 
 
-
-Versions:
+<br/><br/>
+### Versions:
 OS: Ubuntu 21.04
 kernel: 5.11.0-22-generic
 GIMP: 2.10.22
@@ -13,15 +13,15 @@ ffmpeg: 4.3.2-0
 ffprobe: 4.3.2-0
 
 
-
-Summary:
+<br/><br/>
+### Summary:
 1. Save each frame of the video as an image
 2. Apply a GIMP effect to each image
 3. Convert the images back to a video
 
 
-
-1. Save each frame of the video as an image
+<br/><br/>
+### 1. Save each frame of the video as an image
 The first thing we need to do is determine how much zero padding in the filenames we need so they are sorted correctly. You can estimate how much zero padding you need by multiplying the frames per second by the video duration.
     Example: 30FPS x 15 seconds = 450 frames. Three digit number, so we need zero padding of at least 2.
 zero_pads=2
@@ -35,16 +35,19 @@ file_path=/home/user/Videos/f20653824_ftyp.mov
 zero_pads=$(echo "l($(ffprobe -i $file_path -v error -select_streams v:0 -show_entries stream=nb_frames -of default=nokey=1:noprint_wrappers=1))/l(10)" | bc -l | cut -d \. -f1)
 
 
+<br/><br/>
 Create a directory to put the images in and cd to it.
-```mkdir all_frames
-cd all_frames```
+```
+mkdir all_frames
+cd all_frames
+```
 
 Save each frame of the video as an image:
 ffmpeg -hide_banner -i /home/user/Videos/f20653824_ftyp.mov temp_%0"$zero_pads"d.png
 
 
-
-2. Apply the effects to each image
+<br/><br/>
+### 2. Apply the effects to each image
 Now we have a directory full of images which we want to apply a GIMP effect to. Let's create another directory to save the output of GIMP. I'll name my directory "new".
 mkdir new
 
