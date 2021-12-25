@@ -53,7 +53,7 @@ Now we have a directory full of images which we want to apply a GIMP effect to. 
 
 
 <br/><br/><br/>
-** ===  IMPORTANT!  ===\ **
+**===  IMPORTANT!  ===**\
 Become familar with the Script-Fu Console.\
 Open the GIMP (GUI) app. In the Menubar go to Filters > Script-Fu > Console > Browse.\
 This is where you find the names of all the GIMP commands, and their options, and their explanations.
