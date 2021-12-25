@@ -59,18 +59,23 @@ Open the GIMP (GUI) app. In the Menubar go to Filters > Script-Fu > Console > Br
 This is where you find the names of all the GIMP commands, and their options, and their explanations.
 <br/><br/><br/>
 
-Alright, now we get dirty. Here is the syntax for GIMP CLI:
-
-
-Open a file with GIMP. The trailing backslash is to indicate that this code is mulitple lines.
-The "-b" argument is used to run multiple commands in a batch...
-followed by the command you want to use. The command is usually followed by some numerical options.
+Alright, now we get dirty. Here is the basic syntax for GIMP CLI:
 ```
-gimp -i $filename \
--b '(some-gimp-command 0 1 2 3 4 5)'
+gimp -i filename.png \
+-b '(some-gimp-command 0 1 2 3 4 5)' \
+-b '(file-png-save-defaults 1 1 2 "output.png" "raw")' \
+-b '(gimp-quit 0)'
 ```
 
-Let's do a real example.
+Open a file with GIMP using "-i".\
+The trailing backslash is to indicate that this code is mulitple lines.\
+The "-b" argument is used to run multiple commands in a batch...\
+followed by the command you want to use. The command is usually followed by some numerical options.\
+Then save the file.\
+Finally, close GIMP.
+
+<br/><br/>
+Now let's do a real example.
 
 We are going to loop through all the images in this directory.\
 `for i in $(find . -maxdepth 1 -type f | sort -V); do`
