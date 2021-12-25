@@ -9,7 +9,7 @@ GIMP: 2.10.22\
 bash: 5.1.4\
 GNOME Terminal: 3.38.1\
 ffmpeg: 4.3.2-0\
-ffprobe: 4.3.2-0\
+ffprobe: 4.3.2-0
 
 
 <br/><br/>
@@ -41,23 +41,23 @@ Create a directory to put the images in and cd to it.
 mkdir all_frames
 cd all_frames
 ```
-
+<br/><br/>
 Save each frame of the video as an image:\
 `ffmpeg -hide_banner -i /home/user/Videos/f20653824_ftyp.mov temp_%0"$zero_pads"d.png`
 
 
 <br/><br/>
 ### 2. Apply the effects to each image
-Now we have a directory full of images which we want to apply a GIMP effect to. Let's create another directory to save the output of GIMP. I'll name my directory "new".
-mkdir new
+Now we have a directory full of images which we want to apply a GIMP effect to. Let's create another directory to save the output of GIMP. I'll name my directory "new".\
+`mkdir new`
 
 
-<br/><br/>
+<br/><br/><br/>
 ===  IMPORTANT!  ===\
-Become familar with the Script-Fu Console.
-Open the GIMP (GUI) app. In the Menubar go to Filters > Script-Fu > Console > Browse.
+Become familar with the Script-Fu Console.\
+Open the GIMP (GUI) app. In the Menubar go to Filters > Script-Fu > Console > Browse.\
 This is where you find the names of all the GIMP commands, and their options, and their explanations.
-<br/><br/>
+<br/><br/><br/>
 
 Alright, now we get dirty. Here is the syntax for GIMP CLI:
 
