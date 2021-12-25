@@ -18,7 +18,7 @@ ffprobe: 4.3.2-0
 2. Apply a GIMP effect to each image
 3. Convert the images back to a video
 
-### This walkthrough will be using the **bash** CLI
+### This walkthrough will be using the bash CLI
 
 
 <br/><br/>
