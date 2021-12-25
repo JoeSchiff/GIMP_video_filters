@@ -18,6 +18,8 @@ ffprobe: 4.3.2-0
 2. Apply a GIMP effect to each image
 3. Convert the images back to a video
 
+### This walkthrough will be using the bash CLI
+
 
 <br/><br/>
 ### 1. Save each frame of the video as an image
@@ -111,7 +113,7 @@ Close GIMP\
 
 
 <br/><br/>
-All the GIMP code together (with extras):
+All the bash GIMP code together (with extras):
 ```
 for i in $(find . -maxdepth 1 -type f | sort -V)
     do echo -e \\n Begin: "$i"
