@@ -2,7 +2,7 @@
 # How to apply GIMP effects (filters) to video
 
 
-#### Versions:
+#### Versions used:
 OS: Ubuntu 21.04\
 kernel: 5.11.0-22-generic\
 GIMP: 2.10.22\
@@ -61,7 +61,7 @@ Open the GIMP (GUI) app. In the Menubar go to Filters > Script-Fu > Console > Br
 This is where you find the names of all the GIMP commands, and their options, and their explanations.
 <br/><br/><br/>
 
-Alright, now we get dirty. Here is the basic syntax for GIMP CLI:
+Here is the basic syntax for GIMP CLI:
 ```
 gimp -i filename.png \
 -b '(some-gimp-command 0 1 2 3 4 5)' \
@@ -76,7 +76,7 @@ followed by the command you want to use. The command is usually followed by some
 Then save the file.\
 Finally, close GIMP.
 
-<br/><br/>
+<br/><br/><br/>
 Now let's do a real example.
 
 We are going to loop through all the images in this directory.\
