@@ -18,7 +18,7 @@ ffprobe: 4.3.2-0
 2. Apply a GIMP effect to each image
 3. Convert the images back to a video
 
-### This walkthrough will be using the bash CLI
+### This walkthrough will be using the bash CLI on Linux
 
 
 <br/><br/>
@@ -61,7 +61,7 @@ Open the GIMP (GUI) app. In the Menubar go to Filters > Script-Fu > Console > Br
 This is where you find the names of all the GIMP commands, and their options, and their explanations.
 <br/><br/><br/>
 
-Here is the basic syntax for GIMP CLI:
+### Here is the basic syntax for GIMP CLI:
 ```
 gimp -i filename.png \
 -b '(some-gimp-command 0 1 2 3 4 5)' \
