@@ -113,7 +113,7 @@ Close GIMP\
 
 
 <br/><br/>
-All the bash GIMP code together (with extras):
+### All the bash GIMP code together (with extras):
 ```
 for i in $(find . -maxdepth 1 -type f | sort -V)
     do echo -e \\n Begin: "$i"
