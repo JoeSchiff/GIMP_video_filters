@@ -14,6 +14,8 @@ ffprobe: 4.3.2-0
 
 <br/><br/>
 ## Summary:
+GNU Image Manipulation Program (GIMP) accepts only images, not videos. This tutorial describes how to do the following:
+
 1. Save each frame of the video as an image
 2. Apply a GIMP effect to each image
 3. Convert the images back to a video
