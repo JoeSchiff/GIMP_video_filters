@@ -2,7 +2,7 @@
 # How to apply GIMP effects (filters) to video
 
 
-Table of contents
+### Table of contents
 * [Versions used](#Versions-used)
 * [Summary](#Summary)
 * [Description](#Description)
@@ -12,7 +12,7 @@ Table of contents
 
 
 
-
+<br/><br/>
 #### Versions used:
 OS: Ubuntu 21.04\
 kernel: 5.11.0-22-generic\
