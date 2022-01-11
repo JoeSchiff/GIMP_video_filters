@@ -6,6 +6,8 @@ Table of contents
 * [Versions used](#Versions-used)
 * [Summary](#Summary)
 * [Description](#Description)
+    * [1. Save each frame of the video as an image](#1-Save-each-frame-of-the-video-as-an-image)
+    * [2.-Apply-the-effects-to-each-image](#2-Apply-the-effects-to-each-image)
     * [1. Save each frame of the video as an image](#2-Apply-the-effects-to-each-image)
 
 
