@@ -2,6 +2,12 @@
 # How to apply GIMP effects (filters) to video
 
 
+Table of contents
+* [Versions used](#Versions-used)
+
+
+
+
 #### Versions used:
 OS: Ubuntu 21.04\
 kernel: 5.11.0-22-generic\
@@ -23,7 +29,10 @@ GNU Image Manipulation Program (GIMP) accepts only images, not videos. This tuto
 ### This walkthrough will be using the bash CLI on Linux
 
 
+
 <br/><br/>
+## Description:
+
 ### 1. Save each frame of the video as an image
 The first thing we need to do is determine how much zero padding in the filenames we need so they are sorted correctly. You can estimate how much zero padding you need by multiplying the frames per second by the video duration.
     Example: 30FPS x 15 seconds = 450 frames. Three digit number, so we need zero padding of at least 2.\
@@ -32,7 +41,7 @@ The first thing we need to do is determine how much zero padding in the filename
 Or you could just use an arbitrarily high value, like 8, which is enough for about a billion frames.\
 `zero_pads=8`
 
-Optional:
+**Optional:**\
 For fun, here is a programmatic method for determining how much zero padding you need for a file. It uses ffprobe to get the number of frames. Take the log of that number and divide by the log of 10. Basically, count the number of digits.
 ```
 file_path=/home/user/Videos/f20653824_ftyp.mov
