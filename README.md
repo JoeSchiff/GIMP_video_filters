@@ -1,7 +1,7 @@
 
 # How to apply GIMP effects (filters) to video
 
-
+<br/><br/>
 ### Table of contents
 * [Versions used](#Versions-used)
 * [Summary](#Summary)
