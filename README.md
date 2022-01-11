@@ -7,8 +7,8 @@ Table of contents
 * [Summary](#Summary)
 * [Description](#Description)
     * [1. Save each frame of the video as an image](#1-Save-each-frame-of-the-video-as-an-image)
-    * [2.-Apply-the-effects-to-each-image](#2-Apply-the-effects-to-each-image)
-    * [1. Save each frame of the video as an image](#2-Apply-the-effects-to-each-image)
+    * [2. Apply the effects to each image](#2-Apply-the-effects-to-each-image)
+    * [3. Convert the images back to a video](#3-Convert-the-images-back-to-a-video)
 
 
 
