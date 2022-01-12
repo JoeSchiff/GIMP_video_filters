@@ -72,7 +72,7 @@ Now we have a directory full of images which we want to apply a GIMP effect to. 
 
 <br/><br/><br/>
 **===  IMPORTANT!  ===**\
-Become familar with the Script-Fu Console.\
+Become familiar with the Script-Fu Console.\
 Open the GIMP (GUI) app. In the Menubar go to Filters > Script-Fu > Console > Browse.\
 This is where you find the names of all the GIMP commands, and their options, and their explanations.
 <br/><br/><br/>
@@ -86,7 +86,7 @@ gimp -i filename.png \
 ```
 
 Open a file with GIMP using "-i".\
-The trailing backslash is to indicate that this code is mulitple lines.\
+The trailing backslash is to indicate that this code is multiple lines.\
 The "-b" argument is used to run multiple commands in a batch...\
 followed by the command you want to use. The command is usually followed by some numerical options.\
 Then save the file.\
@@ -162,7 +162,7 @@ cd new
 ffmpeg -hide_banner -framerate 29.97 -pattern_type glob -i '*.png' -c:v libx264 -preset slow -crf 19 output.mkv
 ```
 <br/><br/>
-The audio will have been removed. Here's how you can extract the audio stream from the orignal video:\
+The audio will have been removed. Here's how you can extract the audio stream from the original video:\
 `ffmpeg -hide_banner -i /home/user/Videos/f20653824_ftyp.mov -vn -acodec copy output.aac`
 
 <br/><br/>
