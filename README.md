@@ -166,7 +166,7 @@ The audio will have been removed. Here's how you can extract the audio stream fr
 `ffmpeg -hide_banner -i /home/user/Videos/f20653824_ftyp.mov -vn -acodec copy output.aac`
 
 <br/><br/>
-And here's how to reapply the audio to the video after the new effects.\
+And here's how to reapply the audio to the video with the new effects.\
 `ffmpeg -hide_banner -i output.mkv -i output.aac -map 0:v -map 1:a -c:v copy combined_output.mkv`
 
 
